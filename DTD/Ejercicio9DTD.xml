@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE personas SYSTEM "Ejercicio9DTD.dtd">
+
+<personas>
+  <persona sexo="H">
+    <nombre>Paco</nombre>
+    <nacimiento anyo="1986" mes="3" dia="5"/>
+    <direccion>
+      <calle>caoba 1</calle>
+      <poblacion prov="p41">camas</poblacion>
+      <cpostal>41005</cpostal>
+    </direccion>
+  </persona>
+  
+  <persona sexo="M">
+    <nombre>Juanita</nombre>
+    <nacimiento anyo="1999" mes="2" dia="5"/>
+    <direccion>
+      <calle>Altamira 1</calle>
+      <poblacion prov="p34">inventada</poblacion>
+      <cpostal>34005</cpostal>
+    </direccion>
+  </persona>
+  <provincias>
+  <provincia idProv="p41">Sevilla</provincia>
+  <provincia idProv="p34">Palencia</provincia>
+  </provincias>
+
+</personas>

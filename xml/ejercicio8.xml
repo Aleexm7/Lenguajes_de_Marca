@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ciudades>
+
+<ciudades>
+  <ciudad nombre="Sevilla" gentilicio="Sevillano" comunidad="Andalucia">
+  <monumentos>
+    <monumento nombre="Giralda" epoca="Musulman" uso="asadada"/>
+    <monumento nombre="lapepa" epoca="nolose" uso="asjiadj"/>
+  </monumentos>
+</ciudad>
+<ciudad nombre="Madrid" gentilicio="Madrileño" comunidad="Madrid">
+  <monumentos>
+    <monumento nombre="jsadja" epoca="asa" uso="asadada"/>
+    <monumento nombre="ldadhaw" epoca="sdaw" uso="asjiadj"/>
+  </monumentos>
+</ciudad>
+</ciudades>

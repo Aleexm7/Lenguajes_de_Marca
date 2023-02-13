@@ -1,0 +1,27 @@
+<!ELEMENT ediciones (cabecera, tabla)>
+  <!ELEMENT cabecera (titulo, contenido, descripcion)*>
+    <!ATTLIST cabecera fecha CDATA #REQUIRED>
+    <!ELEMENT titulo (#PCDATA)>
+    <!ELEMENT contenido (#PCDATA)>
+    <!ELEMENT descripcion (#PCDATA)>
+    
+  <!ELEMENT tabla (norte, centro, sur)>
+    <!ELEMENT norte (nombre,trimestre*)>
+      <!ELEMENT nombre (#PCDATA)>
+      <!ELEMENT trimestre EMPTY>
+          <!ATTLIST trimestre numero CDDATA #REQUIRED>
+          <!ATTLIST trimestre lib_vendidos CDDATA #REQUIRED>
+      
+    <!ELEMENT centro (trimestre,lib_vendidos)*>
+     <!ELEMENT centro (nombre,trimestre*)>
+      <!ELEMENT nombre (#PCDATA)>
+      <!ELEMENT trimestre EMPTY>
+          <!ATTLIST trimestre numero CDDATA #REQUIRED>
+          <!ATTLIST trimestre lib_vendidos CDDATA #REQUIRED>
+          
+    <!ELEMENT sur (trimestre, lib_vendidos)*>
+       <!ELEMENT sur (nombre,trimestre*)>
+      <!ELEMENT nombre (#PCDATA)>
+      <!ELEMENT trimestre EMPTY>
+          <!ATTLIST trimestre numero CDDATA #REQUIRED>
+          <!ATTLIST trimestre lib_vendidos CDDATA #REQUIRED>

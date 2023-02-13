@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="/html/css/estilo9_2.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio9_2</title>
+    </head>
+    <body>
+        <form method="post" action="tratamiento.php">
+            <fieldset>
+                <legend>Por favor, complete estas opciones</legend> 
+                <div>
+                        <label for="fecha">Fecha: </label>
+                        <input type="date" id="fecha" name="fecha">
+                </div>
+                <div>
+                    <label for="archivo">Elija un fichero:</label>
+			        <input type="file" id="archivo" required>
+                </div>
+                <div>
+                    <input type="checkbox" id="jpg" value="jpg" name="jpg">
+                    <label for="jpg">JPG</label>
+                    <input type="checkbox" id="png" value="png" name="png">
+                    <label for="opcion2">PNG</label>
+                </div>
+                <div>
+                    <label for="color">Elija un color:  </label>
+			        <input type="color" id="color" name="color">
+                </div>
+                <div>
+                    <label for="instituto">Instituto </label>
+                    <input type="text" id="instituto" name="instituto" maxlength="20">
+                </div>
+                <div>
+                    <label for="estudios">Estudios elegidos </label>
+                    <input type="text" id="estudios" name="estudios" maxlength="40">
+                </div>
+                <div>
+                    <textarea name="comentarios" rows="5" cols="40">Inserte aquí el texto.</textarea>
+                </div>
+                <div>
+                    <label for="hora">Elija una hora:</label>
+			        <input type="time" id="tiempo" name="hora">
+                </div>
+                <div>
+                    <select id="hardware" name="hardware" multiple>
+                        <option value="Tarjeta">Tarjeta aceleradora</option>
+                        <option value="Monitor">Monitor LED</option>
+                        <option value="SSD">SSD</option>
+                        <option value="Red">Red</option>
+                    </select>
+                </div>
+            </fieldset>
+            <div>
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Restablecer">
+            </div>
+        </form>
+    </body>
+</html>

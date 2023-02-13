@@ -1,0 +1,268 @@
+/*---------CONFIGURACION DE ENCABEZADO--------------*/
+
+body{
+    background-image: url(/TrabajoDisplay/img/wallpaperbetter.com_1920x1080.jpg);
+    
+    overflow: hidden;
+    background-repeat: repeat-y;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: black;
+    perspective: 1000px; /*Determina la distancia entre el plano z=0  para dar perspectiva a un elemento posicionado en 3D, en este caso daremos profundidad.*/
+    perspective-origin: 50% 50%; /*Determina la posicion a la que mira el espectador*/
+    animation: animacion 220s linear infinite backwards running ; /*Aqui creamos la variable animacion y le aplicamos los filtros de la animacion, en este caso, sera una animacion que dure 100s, su recorrido es linear e infinito*/
+    
+    
+}
+
+ @keyframes animacion { /*Creamos la animación que vamos a implementar nuevamente*/
+   100%{
+    background-position:0px -4000px; /*La posicion del fondo va desde los 0px(eje horizontal) a 4000px(eje vertical), con esto crearemos el recorrido que va tener nuestro fondo*/
+
+}
+}
+
+
+body div  ul {  /*Quitamos los items de las listas para después añadir los elementos nosotros */
+    list-style: none;
+}
+
+
+.estilo-titulo{ 
+    text-align: center;
+    color: #FF7F50;
+    text-shadow: 0  2px 0 #000000,/*Agregamos efecto de sombra a nuestro  titulo*/
+               0  4px 0 #060605,
+               0  6px 0 #000000;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    letter-spacing: 2px;   
+    font-size: 20px;    
+            
+}
+
+p{
+    width: 0;
+    color: #FFFFFF;
+    text-shadow: none;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 15px;
+    margin: 0 auto;
+    font-family: "Courier New";
+    
+    animation: escribir 4s steps(30) 1s 1 normal both, blink 1s steps(1) infinite;  /*Creamos la animacion "Escribir", le decimos que dure 4s y que sea un total de 30 pasos. Para dar efecto de maquina de escribir*/
+}
+@keyframes escribir {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+
+
+.texto-invertido{
+    width: 0;
+    color: #FFFFFF;
+    text-shadow: none;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 13px;
+    margin-top: 6px;
+    font-family: "Courier New";
+    animation: invertido 4s steps(30) 1s 1 normal both, blink 1s steps(1) infinite;/*Creamo la animacion "Invertido", le decimos que tenga las misma propiedades que comenté anteriormente*/
+}
+@keyframes invertido {
+    from {
+        margin-left: 0; /* Esta animacion comenzará desde la izquierda sin ancho*/
+        width: 0;
+    }
+    to {
+        width: 100%;
+        margin-right: 100%; /*Y terminará en la  derecha ocupando el 100% de su ancho */
+    }
+  }
+
+
+h2{
+    text-align: center;
+    
+}
+a {
+    text-decoration: none;/*Quitamos los enlaces de los botones */
+    
+}
+.lista-check{
+    list-style-image: url(/TrabajoDisplay/img/check-circle.svg);
+    
+    
+}
+/*------------CONFIGURACION ELEMENTO PADRE-----------*/
+
+.lista-de-elementos{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 100px;
+}
+
+/*--------CONFIGURACION ELEMENTO HIJO 1-----------------*/
+
+
+.box1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    width: 20%;
+    height: 320px;
+    border-radius: 10px;
+    
+    
+   
+}
+
+.centrado{ /*Centramos el contenido de todas las box*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.estilo-lista{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+
+}
+
+.detalles1{
+    display: flex;
+    flex-direction: column;
+    
+    line-height: 30px;
+    
+}
+
+.precio{
+    font-weight: bold;
+    text-align: center;
+}
+
+ 
+.button{
+    background-color: #FF7F50;
+    color: black;
+    align-self: center;
+    padding: 0.3em 1.2em;
+    width: 100px;
+    height: 35px;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight: 300;
+    color:#FFFFFF;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.3s;
+}
+
+
+.button:hover{
+    border-color: rgba(255,255,255,1);
+}
+
+
+/*CONFIGURACION ELEMENTO HIJO 2*/
+.box2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    width: 20%;
+    height: 400px;
+    border-radius: 10px;
+    
+
+}
+
+.estilo-lista2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.detalles2{
+    display: flex;
+    flex-direction: column;
+    
+    line-height: 35px;
+
+}
+
+
+.button2{
+    background-color: #FF7F50;
+    color: black;
+    align-self: center;
+    padding: 0.3em 1.2em;
+    width: 100px;
+    height: 35px;
+    border:0.16em solid rgba(255,255,255,0);
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.3s;
+    
+
+}
+.button2:hover{
+    border-color: rgba(255,255,255,1);
+}
+
+
+.precio2{
+    font-weight: bold;
+    text-align: center;
+    margin-top: 40px;
+}
+
+
+
+
+/*CONFIGURACION ANIMACION COHETE*/
+
+
+.foto{
+    position: absolute;
+    top: 620px;
+    animation-duration: 8s;
+    animation-name: foto; /*Añadimos el nombre de la animación para después usarlo en el Keyframe*/
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    z-index: -1;
+}
+img{
+    width: 180px;
+    overflow: hidden;
+    transform: rotate(20deg) translateX(10px); /*Cambiamos la rotacion de la imagen, ya que por defecto venía de otra forma*/
+    
+}
+ @keyframes foto { /*Mencionamos la variable foto creada anteriormente.*/
+    from {
+      bottom: 0px;/*La animacion ira desde la parte inferior hasta un poco mas de la parte de arriba, para dar efecto de que el cohete se va fuera de la pantalla*/
+    }
+  to {
+      top: -300px;
+    }
+  }

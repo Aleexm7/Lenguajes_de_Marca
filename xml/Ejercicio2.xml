@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ofertas>
+<ofertas>
+
+  <disco1>
+    <nombre artista="Gary Moore">Still got the blues</nombre>
+    <pais>UK</pais>
+    <compañia año_de_publicacion="1990">Virgin records</compañia>
+    <precio>10.20</precio>
+  </disco1>
+   <disco2>
+    <nombre artista="Bee Gees">One night only</nombre>
+    <pais>UK</pais>
+    <compañia año_de_publicacion="1998">Polydor</compañia>
+    <precio>10.90</precio>
+  </disco2>
+  <disco3>
+    <nombre artista="Percy Sledge">When a man loves a women</nombre>
+    <pais>USA</pais>
+    <compañia año_de_publicacion="1987">Atlantic</compañia>
+    <precio>8.70</precio>
+  </disco3>
+  <disco4>
+    <nombre artista="Will Smith">Big Willy Style</nombre>
+    <pais>USA</pais>
+    <compañia año_de_publicacion="1997">Columbia</compañia>
+    <precio>9.90</precio>
+  </disco4>
+  <disco5>
+    <nombre artista="Radio Futura">La cancion de Juan perro</nombre>
+    <pais>España</pais>
+    <compañia año_de_publicacion="1987">Sony Music-Ariola</compañia>
+    <precio>9.90</precio>
+  </disco5>
+  <disco6>
+    <nombre artista="Otis Redding">The dock of the day</nombre>
+    <pais>USA</pais>
+    <compañia año_de_publicacion="1987">Atlantic</compañia>
+    <precio>7.90</precio>
+  </disco6>
+  
+</ofertas>

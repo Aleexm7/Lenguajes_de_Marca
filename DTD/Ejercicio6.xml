@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE panel SYSTEM "Ejercicio6DTD.dtd">
+
+<panel>
+  <aeropuerto>AEROPUERTO JFK</aeropuerto>
+    
+    
+    <vuelos>
+      <vuelo codigo="V22" estado="R">
+        
+        <diario/>
+        <origen>New York</origen>
+        <destino>chicago</destino>
+        <hora-salida>9:30</hora-salida>
+        <hora-llegada>11:30</hora-llegada>
+        
+      </vuelo>
+      <vuelo codigo="V23" estado="C">
+        
+        <diario></diario>
+        <origen>New York</origen>
+        <destino>Miami</destino>
+        <hora-salida>10:15</hora-salida>
+        <hora-llegada>11:15</hora-llegada>
+        
+      </vuelo>
+    </vuelos>
+  <fechavuelos>31/01/2022</fechavuelos>
+</panel>

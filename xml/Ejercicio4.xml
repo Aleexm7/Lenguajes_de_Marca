@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE equipos_de_futbol>
+<equipos_de_futbol>
+    <equipo>
+    
+        <nombre>PSG</nombre>
+        <ciudad>Francia, París</ciudad>
+        <entrenador>Christophe Galtier</entrenador>
+        
+        <jugadores>
+          <jugador posicion="Delantero">
+            <nombre>Kylian Mbappé</nombre>
+            <nacionalidad>Francia</nacionalidad>
+          </jugador>
+          
+          <jugador posicion="Delantero o centro campista">
+            <nombre>Lionel Messi</nombre>
+            <nacionalidad>Argentina</nacionalidad>
+          </jugador>
+        </jugadores>
+    </equipo>
+    <equipo>
+        <nombre>Real Betis Balompié</nombre>
+        <ciudad>Sevilla, España</ciudad>
+        <entrenador>Manuel Peregrini</entrenador>
+        <jugadores>
+          <jugador posicion="Delantero">
+            <nombre>Borja Iglesias</nombre>
+            <nacionalidad>España</nacionalidad>
+          </jugador>
+          <jugador posicion="Delantero">
+            <nombre>Joaquin Sánchez</nombre>
+            <nacionalidad>España</nacionalidad>
+          </jugador>
+        
+        <nombre>Real Betis Balompie</nombre>
+        <ciudad>Sevilla, España</ciudad>
+        <entrenador>Manuel Pellegrini<entrenador>
+        
+        <jugador1>
+          <nombre>Joaquín sánchez</nombre>
+          <posicion tipo="Delantero"/>
+          <nacionalidad>España</nacionalidad>
+        </jugador1>
+        
+        <jugador2>
+          <nombre>Borja Iglesia</nombre>
+          <posicion tipo="Delantero "/>
+          <nacionalidad>España</nacionalidad>
+        </jugador2>
+    </equipo>
+</equipos_de_futbol>

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE peliculas>
+
+<peliculas>
+    <pelicula titulo="En los márgenes" director="Juan Diego Botto" genero="Drama">
+    <pais cod="ESP"/>
+    <duracion unidad="minutos">103</duracion>
+    <sipnosis>asjajsjwdiwd</sipnosis>
+    <clasificacion clasif="12">No recomendada a menores de 12 años</clasificacion>
+    <reparto>
+      <actor>Luis Toscar</actor>
+      <actriz>Penelope Cruz</actriz>
+    </reparto>
+    </pelicula>
+    <pelicula titulo="Focused" director="James Cameron" genero="Accion">
+    <pais cod="EEUU"/>
+    <duracion unidad="minutos">120</duracion>
+    <sipnosis>asjajsjwdiwd</sipnosis>
+    <clasificacion clasif="18">No recomendada a menores de 18 años</clasificacion>
+    <reparto>
+      <actor>Luis el Caja</actor>
+      <actriz>Paquita</actriz>
+    </reparto>
+    </pelicula>
+</peliculas>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE pizzas SYSTEM "Ejercicio4DTD.dtd">
+<pizzas>
+  <ingredientes>
+  <ingrediente coding="ALB">Albahaca</ingrediente>
+  <ingrediente coding="PEP">Peperoni</ingrediente>
+  </ingredientes>
+  <tipos>
+    <tipo ingredientes="ALB"></tipo>
+    <tipo nombre="Romana" ingredientes="PEP"></tipo>
+  </tipos>
+</pizzas>

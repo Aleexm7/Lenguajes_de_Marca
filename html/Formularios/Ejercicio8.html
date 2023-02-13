@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <link href="/html/css/estilo8.css" rel="stylesheet" type="text/css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ejercicio8</title>
+    </head>
+    
+    <body>
+        <h1>FORMULARIO DE REGISTRO</h1>
+        <form>
+            <div> 
+                <label for="nombre">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" maxlength="15">
+            </div>
+
+            <div>
+                <label for="apellidos">Apellidos: </label>
+                <input type="text" id="apellidos" name="apellidos" maxlength="15">
+            </div>
+
+            <div>
+                sexo          
+                <input type="radio" id="hombre" value="H" name="genero"/>hombre
+                <input type="radio" id="mujer" value="M" checked name="genero"/>mujer
+            </div>
+            <div>
+                <label for="correo"> Correo electrónico: </label>
+                <input type="email" id="correo" name="correo" pattern="[a-zA-Z0-9]+\@[a-zA-Z0-9]+\.[a-zA-Z]{3,4}"> 
+            </div>
+            <div>
+                poblacion
+                    <select id="ciudad" name="ciudad">
+                        <option value="svq">Sevilla</option>
+                        <option value="bcn">Barcelona</option>
+                        <option value="mad">Madrid</option>
+                        <option value="agp">Malaga</option>
+                    </select>
+            </div>
+            <div>
+                Descripcion
+                <textarea name="comentarios" rows="5" cols="40">Escribe aquí tus comentarios</textarea>
+            </div>
+            <div>
+                <input type="checkbox" id="opcion1" value="opcion1"  name ="opcion1">
+                <label for="opcion1">Deseo recibir información sobre novedades y ofertas</label>
+            </div>
+            <div>
+                <input type="checkbox" id="opcion2" value="opcion2" name="opcion2">
+                <label for="opcion2">Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos</label>
+            </div>
+            <div>
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+    </body>
+</html>
