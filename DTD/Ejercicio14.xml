@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!DOCTYPE calendario SYSTEM "Ejercicio14DTD.dtd">
+
+<calendario>
+<mes nombre="febrero">
+  <dias>
+    <dia num="1">
+      <nombre>Miercoles</nombre>
+      <descripcion>sjahdjhdj</descripcion>
+    </dia>
+    <dia num="2">
+      <nombre>Jueves</nombre>
+      <descripcion>jajajaja</descripcion>
+    </dia>
+    <dia num="3">
+      <nombre>Viernes</nombre>
+      <descripcion>sjahdjhdj</descripcion>
+    </dia>
+    <dia num="4">
+      <nombre>Sabado</nombre>
+      <descripcion>jajajaja</descripcion>
+    </dia>
+    <dia num="5" tipo="festivo">
+      <nombre>Domingo</nombre>
+      <descripcion>sjahdjhdj</descripcion>
+    </dia>
+    <dia num="6">
+      <nombre>Lunes</nombre>
+      <descripcion>jajajaja</descripcion>
+    </dia>
+    <dia num="7">
+      <nombre>Martes</nombre>
+      <descripcion>sjahdjhdj</descripcion>
+    </dia>
+    <dia num="8">
+      <nombre>Miercoles</nombre>
+      <descripcion>jajajaja</descripcion>
+    </dia>
+    <dia num="9">
+      <nombre>Jueves</nombre>
+      <descripcion>jajajaja</descripcion>
+    </dia>
+    <dia num="10">
+      <nombre>Viernes</nombre>
+      <descripcion>jajajaja</descripcion>
+    </dia>
+    <dia num="11">
+      <nombre>Sabado</nombre>
+      <descripcion>jajajaja</descripcion>
+    </dia>
+    <dia num="12" tipo="festivo">
+      <nombre>Domingo</nombre>
+      <descripcion>jajajaja</descripcion>
+    </dia>
+  </dias>
+</mes>
+</calendario>

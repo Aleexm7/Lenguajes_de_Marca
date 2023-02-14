@@ -1,0 +1,10 @@
+<!ELEMENT calendario (mes)>
+  <!ELEMENT mes (dias+)>
+    <!ATTLIST mes nombre CDATA #REQUIRED>
+    <!ELEMENT dias (dia+)>
+    <!ELEMENT dia (nombre, descripcion)>
+      <!ATTLIST dia num CDATA #REQUIRED>
+      <!ATTLIST dia tipo (laboral | festivo ) "laboral">
+      <!ELEMENT nombre (#PCDATA)>
+      <!ELEMENT descripcion (#PCDATA)>
+      
