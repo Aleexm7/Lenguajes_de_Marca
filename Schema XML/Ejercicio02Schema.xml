@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<marcadores xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="Ejercicio02Schema.xsd">
+
+    <pagina>
+      <nombre>Google</nombre>
+      <descripcion>adwadwa</descripcion>
+      <url>www.google.com</url>
+    </pagina>
+</marcadores>

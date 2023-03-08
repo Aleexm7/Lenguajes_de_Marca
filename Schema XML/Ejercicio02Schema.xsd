@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="marcadores">
+    <xs:complexType> <!-- marcadores es complejo -->
+      <xs:sequence><!-- como tiene elementos hijos puede haber una secuencia de orden obligatorio -->
+        <xs:element ref="pagina" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+<!-- desarrollamos el elemento pagina que sólo hemos indicado con un ref y el número máximo de instancias, por defecto el mínimo es 1 -->
+  <xs:element name="pagina">
+    <xs:complexType>
+      <xs:sequence>
+      <!--definimos el elemento simple nombre. Durante la clase añadimos la restricción de ser una cadena con num mínimo y máximo de caracteres -->
+        <xs:element name="nombre">
+        <xs:simpleType>
+         <xs:restriction base="xs:string"> <!--restricción basada en un tipo de dato concreto-->
+<xs:minLength value="5"/>
+<xs:maxLength value="20"/>
+       </xs:restriction>
+       </xs:simpleType> 
+                </xs:element>
+                  <!--definimos el elemento simple descripcion sin condicionantes -->
+        <xs:element name="descripcion" type="xs:string"/>
+        <!--definimos el elemento simple url sin condicionantes -->
+        <xs:element name="url" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>
