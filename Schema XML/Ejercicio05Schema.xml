@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<fichas xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Ejercicio05Schema.xsd">
+  <ficha codigo="ajk6a">
+    <nombre>Lorena</nombre>
+    <edad>34</edad>
+  </ficha>
+  <ficha codigo="ajk7a">
+    <nombre>Alfredo</nombre>
+    <edad>44</edad>
+  </ficha>
+  <ficha codigo="ajk8a">
+    <nombre>Alberto</nombre>
+    <edad>50</edad>
+  </ficha>
+
+</fichas>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <curso xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	 xsi:noNamespaceSchemaLocation="02ElementosXSD.xsd">
+	 xsi:noNamespaceSchemaLocation="Ejercicio01Schema.xsd">
 
 	 <denominacion>Historia de los videojuegos  </denominacion>
    <numAlumn>15</numAlumn>

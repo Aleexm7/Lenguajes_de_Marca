@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Ejercicio07Schema.xsd">
+  <libro codigo="76855" titulo="El guardián entre el centeno">
+    <autor>J.D. Salinger</autor>
+    <editorial>Alianza Editorial</editorial>
+    <edicion>3a ed.</edicion>
+    <isbn>978-13-9757</isbn>
+    <ubicacion sede="norte"/>
+  </libro>
+  <libro codigo="15447" titulo="El club de la lucha">
+    <autor>Chuck Palahniuk</autor>
+    <editorial>Anaya</editorial>
+    <edicion>7a ed.</edicion>
+    <isbn>978-0307415877</isbn>
+    <ubicacion sede="sur"/>
+  </libro>
+</biblioteca>

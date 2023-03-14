@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<catalogoLibro xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="Ejercicio06Schema.xsd">
+  <libro categoria="ficcion" enstock="true" revisor="">
+    <titulo>Los hombres que no amaban a las mujeres.</titulo>
+    <autor></autor>
+    <fecha>
+      <mes>5</mes>
+      <año>2008</año>
+    </fecha>
+    <ISBN>978-84-233-4044-6</ISBN>
+    <editor>Destino</editor>
+  </libro>
+  <libro categoria="noficcion" enstock="" revisor="Carlos Montes">
+    <titulo>Java a través de ejemplos</titulo>
+    <autor>Jesús Bobadillo</autor>
+    <autor> Adela Sancho</autor>
+    <fecha>
+
+      <año>2003</año>
+    </fecha>
+    <ISBN>84-7897-549-7</ISBN>
+    <editor>Ra-ma</editor>
+  </libro>
+
+</catalogoLibro>
+

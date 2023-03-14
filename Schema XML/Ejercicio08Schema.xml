@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:noNamespaceSchemaLocation="Ejercicio08Schema.xsd">
+	 
+<libro codigo="A27" titulo="Solo en casa">
+  <autor>Alan Barroso</autor>
+  <editorial>Libros del KO</editorial>
+  <edicion>Tercera</edicion>
+  <fechaPubli>2012-05-05</fechaPubli>
+  <isbn>45-56-4121</isbn>
+  <donacion/>
+  <ubicacion sede="norte" />
+  <caracteristicas>
+    <numpaginas>250</numpaginas>
+    <calidad>rústica</calidad>
+  </caracteristicas>
+  
+</libro>
+<libro codigo="A28" titulo="Los molinos">
+  <autor>Cervantes</autor>      <!-- Se pueden poner minimo un autor y maximo 3 para cada libro-->
+  <editorial>Lengua de trapo</editorial>
+  <edicion>Primera</edicion>
+  <fechaPubli>2008-01-26</fechaPubli>    <!-- La fecha de publicacion es tipo Date-->
+  <isbn>22-58-1234</isbn>
+  <ubicacion sede="sur"/>        <!-- La ubicacion tiene como valores definidos norte y sur-->
+  <caracteristicas>
+    <numpaginas>150</numpaginas>
+    <calidad>bolsillo</calidad>
+  </caracteristicas>
+</libro>
+
+</biblioteca>

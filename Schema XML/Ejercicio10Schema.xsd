@@ -1,0 +1,45 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="aeropuerto">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">  
+        <xs:element type="xs:string" name="nombre"/> 
+        <xs:element type="xs:date" name="fecha"/>
+        <xs:element name="vuelos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="vuelo" maxOccurs="unbounded" minOccurs="0"> 
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="diario" type="tipoVacio" minOccurs="0" maxOccurs="1"/> 
+                    <xs:element type="xs:string" name="origen"/>
+                    <xs:element type="xs:string" name="destino"/>    
+                    <xs:element type="xs:time" name="hora-salida"/>
+                    <xs:element type="xs:time" name="hora-llegada"/>
+                  </xs:sequence>
+                  <xs:attribute name="código" type="xs:ID" use="required"/> 
+                  <xs:attribute name="estado" use="optional" default="E">  
+                    <xs:simpleType>
+                      <xs:restriction base="xs:string">
+                        <xs:pattern value="[CER]" />
+                      </xs:restriction>
+                    </xs:simpleType>
+                  </xs:attribute>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+
+
+  <xs:simpleType name="tipoVacio">    
+    <xs:restriction base="xs:string">
+      <xs:length value="0"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

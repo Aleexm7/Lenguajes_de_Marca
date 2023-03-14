@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="biblioteca">
+
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="libro" minOccurs="2" maxOccurs="unbounded"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="libro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="autor" type="xs:string" maxOccurs="3"/>
+        <xs:element name="editorial" minOccurs="0" maxOccurs="1">
+          <xs:simpleType> 
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="Lengua de trapo"/><!-- Aquí usamos enumeration para que solo se pueda elegir entre estas dos editoriales-->
+              <xs:enumeration value="Libros del KO"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="edicion" type="xs:string" minOccurs="0"/>
+        <xs:element name="fechaPubli" type="xs:date"/>
+        <xs:element name="isbn">
+        <xs:simpleType>
+          <xs:restriction base="xs:string">
+            <xs:pattern value="\d{2}-\d{2}-\d{4}"/> 
+          </xs:restriction>
+        </xs:simpleType>
+        </xs:element>
+        <xs:element name="donacion" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="ubicacion" type="tipoUbicacion"/>
+        <xs:element name="caracteristicas">
+        <xs:complexType>
+          <xs:sequence>
+          
+            <xs:element name="numpaginas" ><!-- Aquí restringimos el número de páginas usando minInclusive y maxInclusive -->
+              <xs:simpleType>
+                <xs:restriction base="xs:integer">
+                  <xs:minInclusive value="150"/>
+                  <xs:maxInclusive value="250"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+            
+            <xs:element name="calidad"><!-- Aquí definimos las restricciones de calidad. Solo puede ser rústica o de bolsillo por lo que usaremos xs:enumeration -->
+              <xs:simpleType>
+                <xs:restriction base="xs:string">
+                  <xs:enumeration value="rústica"/>
+                  <xs:enumeration value="bolsillo"/>
+                </xs:restriction>
+              </xs:simpleType>
+            </xs:element>
+          </xs:sequence>
+        </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      
+      <xs:attribute name="codigo" use="required"><!-- Aquí van las restricciones para el atributo código, usando un patter value formado por tres caracteres alfanuméricos -->
+      <xs:simpleType>
+        <xs:restriction base="xs:ID">
+          <xs:pattern value="[a-zA-Z0-9]{3}"/>  
+        </xs:restriction>
+      </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="titulo" type="xs:string" use="required"/>
+    </xs:complexType>
+  </xs:element>
+
+
+  <xs:complexType name="tipoUbicacion"> <!-- Aquí la restricción para el tipo custom Ubicación. Igual que en el ejercicio anterior.-->
+    <xs:attribute name="sede" use="required">
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="norte"/>
+          <xs:enumeration value="sur"/>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+  </xs:complexType>
+
+
+</xs:schema>

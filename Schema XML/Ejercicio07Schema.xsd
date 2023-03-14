@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"> <!-- Elemento raiz del documento  -->
+
+  <xs:element name="biblioteca"> <!-- Definimos el elemento biblioteca  -->
+
+    <xs:complexType> <!-- Indica que el elemento biblioteca es de tipo complejo -->
+      <xs:sequence> <!-- Esta sentencia indica que los elementos deben ir en el orden especificado -->
+        <xs:element ref="libro" minOccurs="2" maxOccurs="unbounded"/> <!-- Usamos ref para definirlo más adelante. Indicamos que ha de aparecer mínimo dos veces y sin límite en el máximo.-->
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="libro"> <!-- Definimos el elemento libro -->
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="autor" type="xs:string"  maxOccurs="3"/> <!-- Permitiendo un máximo de tres autores -->
+        <xs:element name="editorial" type="xs:string" minOccurs="0" maxOccurs="1"/><!--Aparece una o ninguna vez.  -->
+        <xs:element name="edicion" type="xs:string"/>
+        <xs:element name="isbn" type="xs:string"/>
+        <xs:element name="donacion" type="xs:string" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="ubicacion" type="tipoUbicacion"/><!-- Creamos un tipo personalizado para definir más adelante el elemento -->
+      </xs:sequence>
+      <xs:attribute name="codigo" type="xs:string" use="required"/> <!-- Tipo obligatorio -->
+      <xs:attribute name="titulo" type="xs:string" use="required"/><!-- Tipo obligatorio -->
+    </xs:complexType>
+  </xs:element>
+
+
+    <xs:complexType name="tipoUbicacion"> <!-- Aquí definimos el elemento ubicación -->
+      <xs:attribute name="sede" use="required">
+      <xs:simpleType>
+      <xs:restriction base="xs:string">
+         <xs:enumeration value="norte"/><!-- Aquí se indica que solo puede ser norte o sur.-->
+         <xs:enumeration value="sur"/>
+      </xs:restriction>
+      </xs:simpleType>
+    </xs:attribute>
+   </xs:complexType>
+
+
+</xs:schema>
