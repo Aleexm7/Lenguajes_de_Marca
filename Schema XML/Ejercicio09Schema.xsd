@@ -1,46 +1,33 @@
-﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
-  xmlns:xs="http://www.w3.org/2001/XMLSchema">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
   <xs:element name="ejercicio9">
     <xs:complexType>
       <xs:sequence>
-        <xs:element name="matriculaParcial" type="tipoVacio" minOccurs="0" maxOccurs="1"/>
-          
-        <xs:element name="matricula" type="tipoMatricula" minOccurs="0" maxOccurs="1"/> <!-- Elemento complejo con atributo y que pueda aparecer una o ninguna vez y no puede tener nodo texto-->
-        
-        <xs:element name="caso3" type="casoActivado" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="matriculaParcial" minOccurs="0" maxOccurs="1" type="sinNodoTexto"/>
+        <xs:element name="matricula" minOccurs="0" maxOccurs="1">
+         <xs:complexType>
+         <xs:attribute name="activado" type="xs:string" use="required"/>
+         </xs:complexType>
+           </xs:element>
+                <xs:element name="caso3" minOccurs="0" maxOccurs="1">
+         <xs:complexType>
+         <xs:attribute name="activado" use="required" type="parcialTotal"/>
+         </xs:complexType>
+           </xs:element>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-<!-- fin de la estructura-->
-
-<!-- defino los tipos personalizados-->
-<xs:simpleType name="tipoVacio">        <!-- definimos un elemento vacio que no pueda contener texto y que aparezca una o ninguna vez-->
-  <xs:restriction base="xs:string">
-    <xs:length value="0"/>
-  </xs:restriction>
-</xs:simpleType>
-
-
-<!-- Defino los elementos complejos-->
-<xs:complexType name="tipoMatricula">
-  <xs:simpleContent>
-    <xs:extension base="xs:string">
-      <xs:attribute type="xs:string" name="activado"/> 
-    </xs:extension>
-  </xs:simpleContent>
-</xs:complexType>
-
-
-
-<xs:complexType name="casoActivado" >
-  <xs:attribute name="activado">
-    <xs:simpleType>
-      <xs:restriction base="xs:string">
-        <xs:enumeration value="total"/>
-        <xs:enumeration value="parcial"/>
-      </xs:restriction>
-    </xs:simpleType>
-  </xs:attribute>
-</xs:complexType>
-
+  
+   <xs:simpleType name="sinNodoTexto">
+            <xs:restriction base="xs:string">
+              <xs:length value="0"/>
+            </xs:restriction>
+   </xs:simpleType>
+   
+   <xs:simpleType name="parcialTotal">
+          <xs:restriction base="xs:string">
+          <xs:enumeration value="parcial"/>
+          <xs:enumeration value="total"/>
+          </xs:restriction>
+          </xs:simpleType>
 </xs:schema>
