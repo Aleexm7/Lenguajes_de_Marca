@@ -1,24 +1,24 @@
-<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
+﻿<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified"
   xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="aeropuerto">
     <xs:complexType>
-      <xs:choice minOccurs="0" maxOccurs="unbounded">  
-        <xs:element type="xs:string" name="nombre"/> 
+      <xs:choice minOccurs="0" maxOccurs="unbounded">  <!-- Cambio el orden de los elementos con la etiqueta choice y poniendo minimo y maximo-->
+        <xs:element type="xs:Name" name="nombre"/> <!-- Defino el tipo como Name-->
         <xs:element type="xs:date" name="fecha"/>
         <xs:element name="vuelos">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="vuelo" maxOccurs="unbounded" minOccurs="0"> 
+              <xs:element name="vuelo" maxOccurs="unbounded" minOccurs="0"> <!-- Minimo 0 elemento vuelo y maximo infinito-->
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="diario" type="tipoVacio" minOccurs="0" maxOccurs="1"/> 
-                    <xs:element type="xs:string" name="origen"/>
-                    <xs:element type="xs:string" name="destino"/>    
+                    <xs:element name="diario" type="tipoVacio" minOccurs="0" maxOccurs="1"/> <!-- lo hago tipo vacio para que no se pueda incluir nada dentro de el y sea cerrado, opcional con minimo 0 y maxima 1 aparicion-->
+                    <xs:element type="xs:normalizedString" name="origen"/>
+                    <xs:element type="xs:normalizedString" name="destino"/>    <!-- Cambio el tipo a xs:normalizedString que me permite poner espacios, no que si lo pongo tipo Name como el elemento nombre no me permeite espacios en blanco-->
                     <xs:element type="xs:time" name="hora-salida"/>
                     <xs:element type="xs:time" name="hora-llegada"/>
                   </xs:sequence>
-                  <xs:attribute name="código" type="xs:ID" use="required"/> 
-                  <xs:attribute name="estado" use="optional" default="E">  
+                  <xs:attribute name="código" type="xs:ID" use="required"/> <!-- Atributo codigo obligatorio y tipo id para que sea unico-->
+                  <xs:attribute name="estado" use="optional" default="E">  <!-- por defecto tendra valor "E" si no se coloca y con el pattern defino las posibilidades de valores que tiene-->
                     <xs:simpleType>
                       <xs:restriction base="xs:string">
                         <xs:pattern value="[CER]" />
@@ -36,7 +36,7 @@
 
 
 
-  <xs:simpleType name="tipoVacio">    
+  <xs:simpleType name="tipoVacio">    <!-- definimos un elemento vacio que no pueda contener texto y que aparezca una o ninguna vez-->
     <xs:restriction base="xs:string">
       <xs:length value="0"/>
     </xs:restriction>
